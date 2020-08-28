@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1">
+  <title>
+    Blockchain
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+  <br>
+
+ 
+
+
+  
+  <!-- <button ng-click="getAllNotes()" style="position: relative;"> Notes List</button> -->
+
+
+    <span class="span">Note Sheet user 2 </span>
+    <!-- <div class="card" >
+
+      <h1>&nbsp;{{patientData.name}}</h1>
+      <p class="title">Patient ID : alfhaofhaofh</p>
+      <p class="title">Email ID :lsjdhalsjhdfalshfafhapfh;</p>
+      <p><button>Contact : kjdflajhfahf</button></p>
+    </div> -->
+     
+   
+ <div class="notesDiv">
+  <div class="notes form-group" data-ng-repeat="choice in list">
+    <label for="choice" ng-show="showChoiceLabel(choice)">Choices</label>
+    <!-- <button  ng-click="addNewChoice()">Edit Choice</button> -->
+    <button ng-click="removeNewChoice(choice.Key)">Remove Choice</button>
+
+    <input type="text" ng-model=choice.name name="" placeholder="{{choice.Record.make}}" >
+  
+  </div>
+  <button ng-click="submitNotes()" style="position: relative; top: 5vh">Submit</button>
+</div>
+</body>
+
+</html>
