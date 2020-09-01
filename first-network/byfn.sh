@@ -182,7 +182,7 @@ function networkUp() {
   if [ "$CONSENSUS_TYPE" == "kafka" ]; then
     sleep 1
     echo "Sleeping 10s to allow $CONSENSUS_TYPE cluster to complete booting"
-    sleep 9
+    sleep 39
   fi
 
   if [ "$CONSENSUS_TYPE" == "etcdraft" ]; then
@@ -512,7 +512,7 @@ LANGUAGE=golang
 # default image tag
 IMAGETAG="latest"
 # default consensus type
-CONSENSUS_TYPE="solo"
+CONSENSUS_TYPE="kafka"
 # Parse commandline args
 if [ "$1" = "-m" ]; then # supports old usage, muscle memory is powerful!
   shift

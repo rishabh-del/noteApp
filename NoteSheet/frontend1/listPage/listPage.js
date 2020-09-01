@@ -64,20 +64,18 @@ angular.module('myApp.listPage', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngRes
       };
 
       $scope.submitNotes = function(){
-         // var choice
-         var allNotes = [];
-         console.log($scope.list);
-         for(var i = 0;i<$scope.list.length;i++){
-             var id = $scope.list[i].Key;
-           // console.log(choice1);
-       var data =  document.getElementById("notes").value
-         var noteData = {
-         key : id,
-         value: data
-         }
-         allNotes.push(noteData);
-          console.log(allNotes);
-      }
+        // var choice
+        var allNotes = [];
+       console.log($scope.choices);
+        for(var i = 0;i<$scope.choices.length;i++){
+     // var data =  document.getElementById("inputNote").value
+        var noteData = {
+        key : $scope.choices[i].id,
+        value: $scope.choices[i].name
+        }
+        allNotes.push(noteData);
+         console.log(allNotes);
+     }
 
       $http.post('/changeNotes', allNotes).then(function(data, err){
         console.log(data, err);

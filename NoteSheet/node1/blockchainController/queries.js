@@ -15,7 +15,7 @@ let submitNotes = async (data) => {
         return { result: createNotes };
 
     } catch (err) {
-
+console.log("queries.js")
         return { result: err };
     }
 

@@ -6,6 +6,7 @@ var app = express();
 var queries = require('./blockchainController/queries');
 var bodyParser = require("body-parser");
 var helmet = require('helmet');
+var cors = require('cors')
 app.use(bodyParser.json({ limit: '10mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
 app.use(bodyParser.json());
@@ -18,8 +19,10 @@ app.set('views', `${__dirname}/../frontend2`); // __dirname is {workspace}/build
 app.engine('html', require('ejs').renderFile);
 //app.use(compression()); //Compress all routes
 app.use(helmet());
+app.use(cors())
 app.set('view engine', 'html');
 var Users = [];
+
 
 //app.use(router);
 
